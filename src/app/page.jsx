@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import bg from "../../public/images/code.jpg"
 import scroll from "../../public/images/scroll2.jpeg"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 
@@ -18,8 +18,11 @@ export default function Home() {
       setColor(false)
     }
   }
+  useEffect(() => {
+    window.addEventListener('scroll', changeColor)
+  })
 
-  window.addEventListener('scroll', changeColor)
+  
 
   return (
     <>
