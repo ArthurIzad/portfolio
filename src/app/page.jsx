@@ -1,146 +1,154 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+'use client'
+
+import Image from "next/image"
+import Link from "next/link"
+import bg from "../../public/images/code.jpg"
+import scroll from "../../public/images/scroll2.jpeg"
+import { useState } from "react"
+
+
 
 export default function Home() {
+  // change nav color wheb scrolling
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY > 150){
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeColor)
+
   return (
     <>
-      <header>
-        <Link href='/CV'>Mon CV !</Link>
-
+      <header className="flex justify-end ">
+        {/* <nav className="fixed bg-black text-red-700 ml-0 w-full flex justify-end"> */}
+        <nav className={color ?
+          "fixed bg-white font-bold text-black w-full flex justify-end py-7 pr-14 drop-shadow-2xl" /// en scrollant
+          : "fixed bg-transparent text-white font-bold w-full flex justify-end py-7 pr-14 drop-shadow"}> {/* en haut */}
+          <a href="/images/CV_Arthur_Izad.pdf" download="CV_Arthur_Izad.pdf" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Mon CV</a>
+          <a href="#competence" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Mes compétences</a>
+          <a href="#projets" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Projets</a>
+          <a href="#a_propos" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">À propos de moi</a>
+          <a href="#contact" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Me contacter</a>
+        </nav>
       </header>
       
-        <main>
-          <div>
-            <p>ma photo</p>
-            <p>une descrption</p>
+      <main className="">
+        <div className="flex flex-col pt-12 pb-12 text-white h-40" 
+          style={{
+            backgroundImage: `url(${bg.src})`,
+            width: '100%',
+            height: '650px',
+          }}
+        >
+          <div className="flex items-center flex-col ">
+            <Image src="/images/pp.jpg" height={0} width={250} alt="pp" className="rounded-full py-10"/>
+            <h1 className="text-6xl pt-3 pb-3">Arthur Izad - Développeur fullstack</h1>
+            <div className="w-2/3 flex justify-evenly item-center text-center text-4xl py-4">
+              <a href="#contact" className="py-3 px-8 rounded-full bg-black border-white border-2 hover:bg-slate-900">Me contacter</a>
+              <a className="bg-blue-700 hover:bg-blue-900 py-3 px-8 rounded-full border-white border-2" href="/images/CV_Arthur_Izad.pdf" download="CV_Arthur_Izad.pdf">Mon CV</a>
+            </div>
           </div>
-          <div>
-            <p>ici de la motivation</p>
+        </div>
+
+
+        <div className="presentation_general flex items-center flex-col py-10 ">
+          <div className="justify-center text-center">
+            <h2 className="text-2xl py-3"> Développeur fullstack junior</h2>
+            <p className="py-2"> Passionné par la biologie marine et l'informatique, j'ai finalement choisi cette <br />dernière après une réorientation professionnelle </p>
+            <p className="py-2">Diplômé d'OpenClassrooms en tant que développeur full-stack, je suis toujours curieux d'apprendre des nouvelles choses et bien décidé <br /> à donner le meilleur de moi même en toute circonstance</p>
+            <p className="py-2">Je n'ai pas d'affinité pour un domaine en particulier, bien au contraire, je suis enthousiaste à l'idée de rejoindre tout type de projets !!!</p>
           </div>
-          <div>
-            <section> techno 1</section>
-            <section> techno 2</section>
-            <section> techno 3</section>
-            <section> techno 4</section>
+          
+          
+        </div>
+
+        <div className="  flex items-center flex-col" id="competence">
+          <div className="bg-lime-700 w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${scroll.src})`,
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            <h2 className="text-2xl font-bold">Mes compétences</h2>
           </div>
-        </main>
-        <footer>
-          <p>ici des infos diverses et variées</p>
-        </footer>
+          <div className="flex w-full justify-around text-center flex-row pt-10 pb-10">
+            <section className="px-2">
+              <h3 className="font-bold text-xl">Frontend</h3>
+              <p >
+                HTML5 <br />
+                CSS3 / SCSS / Tailwind <br />
+                JavaScript / React / NextJS
+              </p>
+              </section>
+            <section className="px-2 ">
+              <h3 className="font-bold text-xl">Backend</h3>
+              <p >
+                NodeJS <br />
+                Express <br />
+                MongoDB
+              </p>
+            </section>
+            <section className="px-2">
+              <h3 className="font-bold text-xl">En cours d'apprentissage !</h3>
+              <p>
+                Java <br />
+                Python <br />
+                SQL           
+              </p>
+            </section>
+          </div>
+        </div>
+
+        <div id="projets" className="flex items-center flex-col">
+          <div className="bg-amber-700 w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${scroll.src})`,
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            <h2 className="text-2xl font-bold">Projets</h2>            
+          </div>
+          <div className="pt-10 pb-10">
+            <h3>Projets réalisés avec OpenClassrooms</h3>
+            <p>Booki - Création d'une interface statique responsive en HTML/CSS</p>
+            <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
+            <p>Nina Carducci - Débug et optimisation du SEO d'un site</p>
+            <p>Kasa - Création d'une page dynamique en utilisant React</p>
+            <p>Mon vieux grimoire - création du Backend d'un site avec ExpressJS / MongoDB</p>
+          </div>
+        </div>
+        <div className="flex items-center flex-col ">
+          <div className="w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${scroll.src})`,
+              width: '100%',
+              height: '100%',
+            }}
+          >
+            <h2 id="a_propos" className="text-2xl font-bold">À propos de moi</h2>
+          </div>
+          <div className="pt-10 pb-10">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          
+        </div>
+          
+      </main>
+      <footer id="contact" className="bg-black text-white flex flex-col pt-12 pb-12 pl-12">
+        <h2>Me contacter</h2>
+        <p>Téléphone : 06 40 15 96 22</p>
+        <a href="mailto:arthur.izad@gmail.com">Mail</a>
+      </footer>
       
     
     </>
-    // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    //   <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-    //     <Image
-    //       className="dark:invert"
-    //       src="https://nextjs.org/icons/next.svg"
-    //       alt="Next.js logo"
-    //       width={180}
-    //       height={38}
-    //       priority
-    //     />
-    //     <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-    //       <li className="mb-2">
-    //         Get started by editing{" "}
-    //         <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-    //           src/app/page.js
-    //         </code>
-    //         .
-    //       </li>
-    //       <li className="text-blue-500">Save and see your changes instantly. maybe ?xsvgdgf</li>
-    //     </ol>
-    //     <div>
-    //       <Link href="/dashboard">dash</Link>
-    //       <p>sdfsfsdf</p>
-
-    //       <p>sdfsfsdf</p>
-
-    //       <p>sdfsfsdf</p>
-    //       <p>sdfsfsdf</p>
-    //       <p>sdfsfsdf</p>
-    //       <p>sdfsfsdf</p>
-
-    //     </div>
-
-
-
-
-    //     <div className="flex gap-4 items-center flex-col sm:flex-row ">
-    //       <a
-    //         className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-    //         href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         <Image
-    //           className="dark:invert"
-    //           src="https://nextjs.org/icons/vercel.svg"
-    //           alt="Vercel logomark"
-    //           width={20}
-    //           height={20}
-    //         />
-    //         Deploy now
-    //       </a>
-          
-    //       <a
-    //         className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-    //         href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //         target="_blank"
-    //         rel="noopener noreferrer"
-    //       >
-    //         Read our docs
-    //       </a>
-    //     </div>
-    //   </main>
-    //   <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="https://nextjs.org/icons/file.svg"
-    //         alt="File icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Learn
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="https://nextjs.org/icons/window.svg"
-    //         alt="Window icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Examples
-    //     </a>
-    //     <a
-    //       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-    //       href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       <Image
-    //         aria-hidden
-    //         src="https://nextjs.org/icons/globe.svg"
-    //         alt="Globe icon"
-    //         width={16}
-    //         height={16}
-    //       />
-    //       Go to nextjs.org →
-    //     </a>
-    //   </footer>
-    // </div>
   )
 }
