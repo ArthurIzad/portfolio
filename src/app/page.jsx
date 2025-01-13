@@ -78,21 +78,21 @@ export default function Home() {
           >
             <h2 className="text-2xl font-bold text-white">Mes compétences</h2>
           </div>
-          <div className="competence-content flex w-full justify-around text-center flex-row pt-10 pb-10">
+          <div className="competence_content flex w-full justify-around text-center flex-row pt-10 pb-10">
             <section className="px-2">
-              <h3 className="text-2xl">Frontend</h3>
+              <h3 className="competence_title text-2xl">Frontend</h3>
               <p><span className="font-bold">Langage :</span> JavaScript</p>
               <p><span className="font-bold">Framework :</span>  React / NextJS</p>
               <p> <span className="font-bold">Intégration web :</span> HTML5, <br />CSS3 / SCSS / Tailwind</p>
               </section>
             <section className="px-2 ">
-              <h3 className=" text-2xl">Backend</h3>
+              <h3 className="competence_title text-2xl">Backend</h3>
               <p><span className="font-bold">Langage :</span> JavaScript</p>
               <p><span className="font-bold">Framework :</span> ExpressJS</p>
               <p><span className="font-bold">Base de données :</span> MongoDB</p>
             </section>
             <section className="px-2">
-              <h3 className="text-2xl">En cours d'apprentissage !</h3>
+              <h3 className="competence_title text-2xl">En cours d'apprentissage !</h3>
               <p>Java</p>
               <p>Python</p>
               <p>SQL</p>
@@ -100,7 +100,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="projets" className="flex items-center flex-col">
+        <div id="projets" className="projets flex items-center flex-col">
           <div className="bg-amber-700 w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${scroll.src})`,
@@ -108,37 +108,37 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <h2 className="text-2xl font-bold text-white">Projets</h2>            
+          <h2 className="text-2xl font-bold text-white">Projets</h2>            
           </div>
-          <div className="text-center pt-10 pb-10">
+          <div className="projets_content text-center pt-10 pb-10">
             <h3 className="underline pb-2">Projets réalisés avec OpenClassrooms :</h3>
             <div className="all_cards flex flex-wrap justify-around">
-              <div className="border-2 w-1/6 rounded-md">
+              <div className="cards border-2 w-1/6 rounded-md">
                 <a href="https://arthurizad.github.io/projet_1_OC/">
                   <Image src="/images/booki.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p className="text-sm">Booki - Création d'une interface statique responsive en HTML/CSS</p>
                 
                 </a>
               </div>
-              <div className="border-2 w-1/6 rounded-md ">
+              <div className="cards border-2 w-1/6 rounded-md ">
                 <a href="" className="">
                     <Image src="/images/sophie_bluel.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
                 </a>
               </div>
-              <div className="border-2 w-1/6 rounded-md">
+              <div className="cards border-2 w-1/6 rounded-md">
                 <a href="https://arthurizad.github.io/projet_4_OC/">
                   <Image src="/images/nina_carducci.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Nina Carducci - Débug et optimisation du SEO d'un site</p>
                 </a>
               </div>
-              <div className="border-2 w-1/6 rounded-md">
+              <div className="cards border-2 w-1/6 rounded-md">
                 <a href="https://projet-5-ptuxyvy6r-arthurizads-projects.vercel.app/">
                   <Image src="/images/kasa.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Kasa - Création d'une page dynamique en utilisant React</p>
                 </a>
               </div>
-              <div className="border-2 w-1/6 rounded-md">
+              <div className="cards border-2 w-1/6 rounded-md">
                 <a href="https://arthurizad.github.io/projet_6/">
                   <Image src="/images/grimoire.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Mon vieux grimoire - création du Backend d'un site avec ExpressJS / MongoDB</p>
