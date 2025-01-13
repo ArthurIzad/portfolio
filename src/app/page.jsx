@@ -7,7 +7,6 @@ import scroll from "../../public/images/scroll2.jpeg"
 import { useEffect, useState } from "react"
 
 
-
 export default function Home() {
   // change nav color wheb scrolling
   const [color, setColor] = useState(false)
@@ -22,15 +21,13 @@ export default function Home() {
     window.addEventListener('scroll', changeColor)
   })
 
-  
-
   return (
     <>
       <header className="flex justify-end ">
         {/* <nav className="fixed bg-black text-red-700 ml-0 w-full flex justify-end"> */}
         <nav className={color ?
-          "fixed bg-white font-bold text-black w-full flex justify-end py-7 pr-14 drop-shadow-2xl" /// en scrollant
-          : "fixed bg-transparent text-white font-bold w-full flex justify-end py-7 pr-14 drop-shadow"}> {/* en haut */}
+          "navbar fixed bg-white font-bold text-black w-full flex justify-end py-7 pr-14 drop-shadow-2xl" /// en scrollant
+          : "navbar fixed bg-transparent text-white font-bold w-full flex justify-end py-7 pr-14 drop-shadow "} > {/* en haut */}
           <a href="/images/CV_Arthur_Izad.pdf" download="CV_Arthur_Izad.pdf" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Mon CV</a>
           <a href="#competence" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Mes compétences</a>
           <a href="#projets" className="px-3 py-2 rounded-full hover:bg-black/50 hover:text-white">Projets</a>
@@ -40,17 +37,19 @@ export default function Home() {
       </header>
       
       <main className="">
-        <div className="flex flex-col pt-12 pb-12 text-white h-40" 
+        <div className="background flex flex-col pt-12 pb-12 text-white h-40" 
           style={{
             backgroundImage: `url(${bg.src})`,
             width: '100%',
             height: '650px',
           }}
         >
-          <div className="flex items-center flex-col ">
-            <Image src="/images/pp.jpg" height={0} width={250} alt="pp" className="rounded-full py-10"/>
-            <h1 className="text-6xl pt-3 pb-3">Arthur Izad - Développeur fullstack</h1>
-            <div className="w-2/3 flex justify-evenly item-center text-center text-4xl py-4">
+          <div className="bg-container flex items-center flex-col ">
+           
+              <Image src="/images/pp.jpg" height={0} width={250} alt="pp" className="rounded-2xl my-10"/>
+            
+            <h1 className="text-6xl text-center pt-3 pb-3">Arthur Izad - Développeur fullstack</h1>
+            <div className="bg-container-link w-2/3 flex justify-evenly item-center text-center text-4xl py-4">
               <a href="#contact" className="py-3 px-8 rounded-full bg-black border-white border-2 hover:bg-slate-900">Me contacter</a>
               <a className="bg-blue-700 hover:bg-blue-900 py-3 px-8 rounded-full border-white border-2" href="/images/CV_Arthur_Izad.pdf" download="CV_Arthur_Izad.pdf">Mon CV</a>
             </div>
@@ -69,7 +68,7 @@ export default function Home() {
           
         </div>
 
-        <div className="  flex items-center flex-col" id="competence">
+        <div className="competence flex items-center flex-col" id="competence">
           <div className="bg-lime-700 w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${scroll.src})`,
@@ -77,32 +76,26 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <h2 className="text-2xl font-bold">Mes compétences</h2>
+            <h2 className="text-2xl font-bold text-white">Mes compétences</h2>
           </div>
-          <div className="flex w-full justify-around text-center flex-row pt-10 pb-10">
+          <div className="competence-content flex w-full justify-around text-center flex-row pt-10 pb-10">
             <section className="px-2">
-              <h3 className="font-bold text-xl">Frontend</h3>
-              <p >
-                HTML5 <br />
-                CSS3 / SCSS / Tailwind <br />
-                JavaScript / React / NextJS
-              </p>
+              <h3 className="text-2xl">Frontend</h3>
+              <p><span className="font-bold">Langage :</span> JavaScript</p>
+              <p><span className="font-bold">Framework :</span>  React / NextJS</p>
+              <p> <span className="font-bold">Intégration web :</span> HTML5, <br />CSS3 / SCSS / Tailwind</p>
               </section>
             <section className="px-2 ">
-              <h3 className="font-bold text-xl">Backend</h3>
-              <p >
-                NodeJS <br />
-                Express <br />
-                MongoDB
-              </p>
+              <h3 className=" text-2xl">Backend</h3>
+              <p><span className="font-bold">Langage :</span> JavaScript</p>
+              <p><span className="font-bold">Framework :</span> ExpressJS</p>
+              <p><span className="font-bold">Base de données :</span> MongoDB</p>
             </section>
             <section className="px-2">
-              <h3 className="font-bold text-xl">En cours d'apprentissage !</h3>
-              <p>
-                Java <br />
-                Python <br />
-                SQL           
-              </p>
+              <h3 className="text-2xl">En cours d'apprentissage !</h3>
+              <p>Java</p>
+              <p>Python</p>
+              <p>SQL</p>
             </section>
           </div>
         </div>
@@ -115,18 +108,46 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <h2 className="text-2xl font-bold">Projets</h2>            
+            <h2 className="text-2xl font-bold text-white">Projets</h2>            
           </div>
-          <div className="pt-10 pb-10">
-            <h3>Projets réalisés avec OpenClassrooms</h3>
-            <p>Booki - Création d'une interface statique responsive en HTML/CSS</p>
-            <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
-            <p>Nina Carducci - Débug et optimisation du SEO d'un site</p>
-            <p>Kasa - Création d'une page dynamique en utilisant React</p>
-            <p>Mon vieux grimoire - création du Backend d'un site avec ExpressJS / MongoDB</p>
+          <div className="text-center pt-10 pb-10">
+            <h3 className="underline pb-2">Projets réalisés avec OpenClassrooms :</h3>
+            <div className="all_cards flex flex-wrap justify-around">
+              <div className="border-2 w-1/6 rounded-md">
+                <a href="https://arthurizad.github.io/projet_1_OC/">
+                  <Image src="/images/booki.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
+                  <p className="text-sm">Booki - Création d'une interface statique responsive en HTML/CSS</p>
+                
+                </a>
+              </div>
+              <div className="border-2 w-1/6 rounded-md ">
+                <a href="" className="">
+                    <Image src="/images/sophie_bluel.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
+                  <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
+                </a>
+              </div>
+              <div className="border-2 w-1/6 rounded-md">
+                <a href="https://arthurizad.github.io/projet_4_OC/">
+                  <Image src="/images/nina_carducci.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
+                  <p>Nina Carducci - Débug et optimisation du SEO d'un site</p>
+                </a>
+              </div>
+              <div className="border-2 w-1/6 rounded-md">
+                <a href="https://projet-5-ptuxyvy6r-arthurizads-projects.vercel.app/">
+                  <Image src="/images/kasa.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
+                  <p>Kasa - Création d'une page dynamique en utilisant React</p>
+                </a>
+              </div>
+              <div className="border-2 w-1/6 rounded-md">
+                <a href="https://arthurizad.github.io/projet_6/">
+                  <Image src="/images/grimoire.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
+                  <p>Mon vieux grimoire - création du Backend d'un site avec ExpressJS / MongoDB</p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="flex items-center flex-col ">
+        <div className="flex items-center text-center flex-col ">
           <div className="w-full flex justify-center pt-4 pb-4 bg-fixed bg-center bg-no-repeat"
             style={{
               backgroundImage: `url(${scroll.src})`,
@@ -134,12 +155,11 @@ export default function Home() {
               height: '100%',
             }}
           >
-            <h2 id="a_propos" className="text-2xl font-bold">À propos de moi</h2>
+            <h2 id="a_propos" className="text-white text-2xl font-bold">À propos de moi</h2>
           </div>
           <div className="pt-10 pb-10">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
+            <p>Amoureux de voyage et de la mer, j'aime explorer plusieurs hobby.</p>
+            <p>Je suis disponible immédiatemment pour tout type de missions. <br />J'ai évolué dans suffisamment de structures différentes pour pouvoir m'intégrer et être efficace rapidement.</p>
           </div>
           
         </div>

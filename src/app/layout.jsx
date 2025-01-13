@@ -4,7 +4,8 @@ import {Lato} from 'next/font/google'
 import {Playwrite } from 'next/font/google'
 
 
-import "./globals.css"
+import "./styles/globals.css"
+import "./styles/responsive.scss"
 
 
 
