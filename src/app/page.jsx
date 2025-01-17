@@ -84,7 +84,7 @@ export default function Home() {
               <p><span className="font-bold">Langage :</span> JavaScript</p>
               <p><span className="font-bold">Framework :</span>  React / NextJS</p>
               <p> <span className="font-bold">Intégration web :</span> HTML5, <br />CSS3 / SCSS / Tailwind</p>
-              </section>
+            </section>
             <section className="px-2 ">
               <h3 className="competence_title text-2xl">Backend</h3>
               <p><span className="font-bold">Langage :</span> JavaScript</p>
@@ -96,6 +96,7 @@ export default function Home() {
               <p>Java</p>
               <p>Python</p>
               <p>SQL</p>
+              <p>TypeScript</p>
             </section>
           </div>
         </div>
@@ -133,7 +134,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md">
-                <a href="https://projet-5-ptuxyvy6r-arthurizads-projects.vercel.app/">
+                <a href="https://projet-5-rho.vercel.app/">
                   <Image src="/images/kasa.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Kasa - Création d'une page dynamique en utilisant React</p>
                 </a>
