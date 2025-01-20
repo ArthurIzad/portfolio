@@ -122,7 +122,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md ">
-                <a href="" className="">
+                <a href="https://github.com/ArthurIzad/projet_2" className="">
                     <Image src="/images/sophie_bluel.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
                 </a>
@@ -140,9 +140,9 @@ export default function Home() {
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md">
-                <a href="https://arthurizad.github.io/projet_6/">
+                <a href="https://github.com/ArthurIzad/projet_6">
                   <Image src="/images/grimoire.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
-                  <p>Mon vieux grimoire - création du Backend d'un site avec ExpressJS / MongoDB</p>
+                  <p>Mon vieux grimoire - Création du Backend d'un site avec ExpressJS / MongoDB</p>
                 </a>
               </div>
             </div>
@@ -158,18 +158,19 @@ export default function Home() {
           >
             <h2 id="a_propos" className="text-white text-2xl font-bold">À propos de moi</h2>
           </div>
-          <div className="pt-10 pb-10">
-            <p>Amoureux de voyage et de la mer, j'aime explorer plusieurs hobby.</p>
-            <p>Je suis disponible immédiatemment pour tout type de missions. <br />J'ai évolué dans suffisamment de structures différentes pour pouvoir m'intégrer et être efficace rapidement.</p>
+          <div className="py-10">
+            <p className="py-1">D'une première formation en biologie marine, j'ai décidé de me reconvertir dans le développement web pour découvrir de nouveaux horizons</p>
+            <p className="py-1">Amoureux de voyage et de la mer, j'aime explorer et décourvir de nouveaux hobby.</p>
+            <p className="py-1">Je suis disponible immédiatemment pour tout type de missions. <br />J'ai évolué dans suffisamment de structures différentes pour pouvoir m'intégrer et être efficace rapidement.</p>
           </div>
           
         </div>
           
       </main>
-      <footer id="contact" className="bg-black text-white flex flex-col pt-12 pb-12 pl-12">
-        <h2>Me contacter</h2>
+      <footer id="contact" className="bg-black text-white flex flex-col py-10 pl-12">
+        <h2 className="text-2xl font-bold pb-3">Me contacter</h2>
         <p>Téléphone : 06 40 15 96 22</p>
-        <a href="mailto:arthur.izad@gmail.com">Mail</a>
+        <a href="mailto:arthur.izad@gmail.com">Mon mail : arthur.izad@gmail.com</a>
       </footer>
       
     

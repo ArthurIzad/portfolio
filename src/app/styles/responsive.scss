@@ -1,3 +1,21 @@
+
+// tablette
+@media (max-width: 1024px){
+  .all_cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cards{
+      width: 100%;
+      margin-bottom: 20px;
+      img{
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+}
+
 // telephone
 @media (max-width: 430px){
   .navbar{
@@ -44,10 +62,17 @@
     flex-direction: column;
     align-items: center;
     .cards{
-      width: 75%;
+      width: 85%;
       margin-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+
       img{
         padding-bottom: 5px;
+      }
+      p{
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
 
@@ -55,21 +80,5 @@
 
 
   
-
-}
-
-@media (max-width: 830px){
-  .all_cards{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .cards{
-      width: 100%;
-      margin-bottom: 20px;
-      img{
-        padding-bottom: 5px;
-      }
-    }
-  }
 
 }
