@@ -46,7 +46,7 @@ export default function Home() {
         >
           <div className="bg-container flex items-center flex-col ">
            
-              <Image src="/images/pp.jpg" height={0} width={250} alt="pp" className="rounded-2xl my-10"/>
+              <Image src="/images/photoProfil2.jpg" height={0} width={250} alt="pp" className="rounded-2xl my-10"/>
             
             <h1 className="text-6xl text-center pt-3 pb-3">Arthur Izad - Développeur fullstack</h1>
             <div className="bg-container-link w-2/3 flex justify-evenly item-center text-center text-4xl py-4">
