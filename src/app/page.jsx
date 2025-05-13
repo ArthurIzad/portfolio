@@ -115,20 +115,20 @@ export default function Home() {
             <h3 className="underline pb-2">Projets réalisés avec OpenClassrooms :</h3>
             <div className="all_cards flex flex-wrap justify-around">
               <div className="cards border-2 w-1/6 rounded-md">
-                <a href="https://arthurizad.github.io/projet_1_OC/">
+                <a href="https://arthurizad.github.io/Booki_HTML/">
                   <Image src="/images/booki.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p className="text-sm">Booki - Création d'une interface statique responsive en HTML/CSS</p>
                 
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md ">
-                <a href="https://github.com/ArthurIzad/projet_2" className="">
+                <a href="https://github.com/ArthurIzad/Sophie_Bluel_JS" className="">
                     <Image src="/images/sophie_bluel.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Sophie Bluel - Création d'une page dynamique avec JavaScript</p>
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md">
-                <a href="https://arthurizad.github.io/projet_4_OC/">
+                <a href="https://github.com/ArthurIzad/Nina_Carducci_Debug_SEO">
                   <Image src="/images/nina_carducci.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Nina Carducci - Débug et optimisation du SEO d'un site</p>
                 </a>
@@ -140,7 +140,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="cards border-2 w-1/6 rounded-md">
-                <a href="https://github.com/ArthurIzad/projet_6">
+                <a href="https://github.com/ArthurIzad/Mon_vieux_gimoire_Backend">
                   <Image src="/images/grimoire.png" height={0} width={600} alt="pp" className="object-cover h-3/4 rounded-md pb-10 w-full hover:scale-110 transition-all duration-500"/>
                   <p>Mon vieux grimoire - Création du Backend d'un site avec ExpressJS / MongoDB</p>
                 </a>
